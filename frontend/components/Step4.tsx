@@ -12,7 +12,7 @@ export default function Step4({ data, prev, reset }: any) {
       setLoading(true);
       setMessage("");
 
-      await axios.post("http://localhost:5000/api/events", data);
+      await axios.post("`${process.env.NEXT_PUBLIC_API_URL}/api/events`", data);
 
       
       setMessage("success");
